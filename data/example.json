@@ -1,0 +1,58 @@
+{
+  "processor": {
+    "base_cost": 1,
+    "cache_miss_penalty": 20,
+    "branch_mispredict_penalty": 10
+  },
+  "deadline": 100,
+  "operations": [
+    {
+      "name": "Чтение датчика",
+      "op_type": "read",
+      "memory_accesses": 1,
+      "branches": 0
+    },
+    {
+      "name": "Проверка диапазона",
+      "op_type": "check",
+      "memory_accesses": 0,
+      "branches": 1
+    },
+    {
+      "name": "Фильтрация",
+      "op_type": "compute",
+      "memory_accesses": 1,
+      "branches": 0
+    },
+    {
+      "name": "Проверка результата",
+      "op_type": "check",
+      "memory_accesses": 0,
+      "branches": 1
+    },
+    {
+      "name": "Запись результата",
+      "op_type": "write",
+      "memory_accesses": 1,
+      "branches": 0
+    },
+    {
+      "name": "Подготовка ответа",
+      "op_type": "compute",
+      "memory_accesses": 0,
+      "branches": 0
+    },
+    {
+      "name": "Обновление состояния",
+      "op_type": "compute",
+      "memory_accesses": 0,
+      "branches": 0
+    },
+    {
+      "name": "Завершение",
+      "op_type": "control",
+      "memory_accesses": 0,
+      "branches": 0
+    }
+  ]
+}
